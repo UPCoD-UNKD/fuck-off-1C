@@ -1,19 +1,15 @@
-// import { Button } from './button/button';
+import { Hero } from './hero/Hero';
+import { Mission } from './mission/Mission';
+import { Form } from './form/Form';
+import { Footer } from './footer/Footer';
+
 export const App = () => {
   return (
     <>
-      <div
-        style={{
-          height: '100vh',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          fontSize: 40,
-          color: '#010101',
-        }}
-      >
-        Вiдмова вiд 1С
-      </div>
+      <Hero />
+      <Mission />
+      <Form />
+      <Footer />
     </>
   );
 };
