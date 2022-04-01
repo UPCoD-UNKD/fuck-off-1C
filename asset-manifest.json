@@ -1,19 +1,25 @@
 {
   "files": {
-    "main.css": "/fuck-off-1C/static/css/main.d1608123.css",
-    "main.js": "/fuck-off-1C/static/js/main.39c08cd3.js",
+    "main.css": "/fuck-off-1C/static/css/main.c8dc0c77.css",
+    "main.js": "/fuck-off-1C/static/js/main.591a40a9.js",
     "static/js/787.556f096e.chunk.js": "/fuck-off-1C/static/js/787.556f096e.chunk.js",
     "static/media/Montserrat.ttf": "/fuck-off-1C/static/media/Montserrat.3068cdb43142f5625baf.ttf",
     "static/media/Logo.svg": "/fuck-off-1C/static/media/Logo.6c8dbf731830fd2b1c0b6e6863710818.svg",
+    "static/media/PhoneBlk.svg": "/fuck-off-1C/static/media/PhoneBlk.8316c1920cb6450e2644c3fa050f3d44.svg",
     "static/media/Phone.svg": "/fuck-off-1C/static/media/Phone.d0e4b1fa85cff25f7ab5b5ef0fe2c72a.svg",
     "index.html": "/fuck-off-1C/index.html",
+    "static/media/Up.svg": "/fuck-off-1C/static/media/Up.c2c3ecdbc7ba10ed411ff47c0c09fcc4.svg",
+    "static/media/PersonCross.svg": "/fuck-off-1C/static/media/PersonCross.26999fef10663da26db669d9b88d0aed.svg",
+    "static/media/Linkedin.svg": "/fuck-off-1C/static/media/Linkedin.864689c7e91b790fa74bfedd98243ace.svg",
+    "static/media/MessageClose.svg": "/fuck-off-1C/static/media/MessageClose.618a0f0d15ff5e768e740f01ed1ba9a3.svg",
+    "static/media/CarbonDev.svg": "/fuck-off-1C/static/media/CarbonDev.c4e18f3303f7e3052a38ce123370fc73.svg",
     "static/media/Down.svg": "/fuck-off-1C/static/media/Down.104707ecaf3c56dae32d1c7ec89d6114.svg",
-    "main.d1608123.css.map": "/fuck-off-1C/static/css/main.d1608123.css.map",
-    "main.39c08cd3.js.map": "/fuck-off-1C/static/js/main.39c08cd3.js.map",
+    "main.c8dc0c77.css.map": "/fuck-off-1C/static/css/main.c8dc0c77.css.map",
+    "main.591a40a9.js.map": "/fuck-off-1C/static/js/main.591a40a9.js.map",
     "787.556f096e.chunk.js.map": "/fuck-off-1C/static/js/787.556f096e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d1608123.css",
-    "static/js/main.39c08cd3.js"
+    "static/css/main.c8dc0c77.css",
+    "static/js/main.591a40a9.js"
   ]
 }
