@@ -1,30 +1,32 @@
 import { ReactComponent as Logo } from '../../img/icon/Logo.svg';
 import { ReactComponent as Phone } from '../../img/icon/Phone.svg';
 import './Header.css';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
+
 export const Header = () => {
   return (
-    <div className="header">
+    <div className="header" id="header">
       <Logo />
       <ul className="nav-list">
         <li className="nav-item">
-          <a class="nav-link" href="#">
+          <AnchorLink class="nav-link" href="#main">
             Головна
-          </a>
+          </AnchorLink>
         </li>
         <li className="nav-item">
-          <a class="nav-link" href="#">
+          <AnchorLink class="nav-link" href="#mission">
             Наша місія
-          </a>
+          </AnchorLink>
         </li>
         <li className="nav-item">
-          <a class="nav-link" href="#">
+          <AnchorLink class="nav-link" href="#form">
             Ваша думка
-          </a>
+          </AnchorLink>
         </li>
         <li className="nav-item">
-          <a class="nav-link" href="#">
+          <AnchorLink class="nav-link" href="#">
             Відмовитись
-          </a>
+          </AnchorLink>
         </li>
       </ul>
       <div className="contacts">

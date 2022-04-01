@@ -1,6 +1,30 @@
 .mission {
-  margin-bottom: 64px;
+  text-align: center;
+  margin: 0 auto 64px auto;
+  max-width: 847px;
 }
-.acent {
-  color: #ff0000;
+.mission_title {
+  margin-bottom: 40px;
+}
+.who {
+  max-width: 538px;
+  margin: 0 auto 40px auto;
+}
+.title {
+  margin-bottom: 21px;
+}
+.why-box-1-part {
+  margin: 0 194px 21px 194px;
+}
+.why-box-2-part {
+  display: flex;
+}
+.why-box_item {
+  display: flex;
+  flex-direction: column;
+  max-height: 195px;
+}
+
+.accent {
+  color: var(--accent-color);
 }

@@ -19,6 +19,11 @@ html {
 }
 
 body {
+  --primary-color: #000;
+  --second-color: #fff;
+  --accent-color: #ff0000;
+  --second-accent-color: #788f81;
+  --bg-color: #fffdf0;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
 }

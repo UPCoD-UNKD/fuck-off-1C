@@ -2,8 +2,8 @@
   margin-bottom: 20px;
   padding: 53px 65px 37px 65px;
   max-width: 100%;
-  background-color: #788f81;
-  color: #ffff;
+  background-color: var(--second-accent-color);
+  color: var(--second-color);
 }
 
 .main {
@@ -19,6 +19,18 @@
   line-height: 25px;
   margin-bottom: 33px;
 }
-.acent {
-  color: #ff0000;
+.accent {
+  color: var(--accent-color);
+}
+.down {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.045em;
+  max-width: 85px;
+  display: flex;
+  align-items: flex-end;
+}
+.down-t {
+  margin-right: 12px;
 }

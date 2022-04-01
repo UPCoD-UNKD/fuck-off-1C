@@ -9,6 +9,7 @@ export const App = () => {
       <Hero />
       <Mission />
       <Form />
+
       <Footer />
     </>
   );
