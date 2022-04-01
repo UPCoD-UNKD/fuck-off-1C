@@ -2,8 +2,15 @@
   margin-bottom: 20px;
   padding: 53px 65px 37px 65px;
   max-width: 100%;
-  background-color: var(--second-accent-color);
+  /* background-color: var(--second-accent-color); */
   color: var(--second-color);
+  background: linear-gradient(
+      295.61deg,
+      #000000 0%,
+      rgba(57, 57, 57, 0.71) 100%
+    ),
+    url('../../img/HeroBg.jpg');
+  background-size: cover;
 }
 
 .main {

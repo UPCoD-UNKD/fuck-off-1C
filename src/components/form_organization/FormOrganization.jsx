@@ -2,7 +2,7 @@ import './FormOrganization.css';
 import Input from '../input/Input';
 import { useCallback, useState } from 'react';
 import classNames from 'classnames';
-import CheckBox from '../radio/RadioButton';
+import CheckBox from '../Radio/RadioButton';
 
 const FormOrganization = () => {
   const [inputData, setInputData] = useState([
@@ -66,7 +66,7 @@ const FormOrganization = () => {
   );
 
   return (
-    <div className="form_Wrapper">
+    <div className="form_Wrapper" id="form">
       <h3 className="mainTitle">Ваша думка</h3>
       <span className="subtitle">
         Дане опитування допоможе нам почути Вашу думку.
@@ -113,7 +113,7 @@ const FormOrganization = () => {
         <CheckBox name={'ofImportant'} labelText="Інше" />
       </div>
 
-      <span className="form_Title">
+      <span className="form_Title" id="refuse">
         Чи готові Ви перейти на{' '}
         <a href="/" className="form_Title title_link">
           український

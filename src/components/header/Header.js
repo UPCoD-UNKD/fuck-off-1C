@@ -24,7 +24,7 @@ export const Header = () => {
           </AnchorLink>
         </li>
         <li className="nav-item">
-          <AnchorLink class="nav-link" href="#">
+          <AnchorLink class="nav-link" href="#refuse">
             Відмовитись
           </AnchorLink>
         </li>

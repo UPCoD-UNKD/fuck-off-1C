@@ -15,14 +15,15 @@ export const Hero = () => {
           комп’ютерними програмами та базою даних, яка має ділове та домашнє
           призначення.
         </p>
-        <Button />
+        <AnchorLink href="#refuse">
+          <Button />
+        </AnchorLink>
       </div>
-      {/* <div className="down"> */}
+
       <AnchorLink className="down" href="#mission">
         <Down className="down-t" />
         Далі
       </AnchorLink>
-      {/* </div> */}
     </div>
   );
 };
