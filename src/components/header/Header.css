@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  margin-bottom: 219px;
+  justify-content: space-between;
+}
+
+.nav-list {
+  display: flex;
+}
+.nav-item {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
+}
+.nav-item:not(:last-child) {
+  margin-right: 43px;
+}
+.contacts {
+  display: flex;
+}
+.contacts-title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  margin-right: 18px;
+}

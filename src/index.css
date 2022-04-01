@@ -1,15 +1,77 @@
-@import-normalize; /* bring in normalize.css styles */
-
-body {
+/* @import-normalize; bring in normalize.css styles */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./style/fonts/Montserrat.ttf');
+}
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  align-items: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  box-sizing: border-box;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  --primary-color: #000;
+  --second-color: #fff;
+  --accent-color: #ff0000;
+  --second-accent-color: #788f81;
+  --bg-color: #fffdf0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+p {
+  overflow-wrap: break-word;
+}
+h1,
+h2,
+h3,
+h4 {
+  overflow-wrap: break-word;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  border: none;
+  /* background-color: transparent; */
+  cursor: pointer;
+}
+h1 {
+  font-size: 50px;
+  line-height: 61px;
+}
+h2 {
+  font-size: 30px;
+  line-height: 37px;
+}
+h3 {
+  font-size: 23px;
+  line-height: 28px;
+}
+h4 {
+  font-size: 19px;
+  line-height: 28px;
 }

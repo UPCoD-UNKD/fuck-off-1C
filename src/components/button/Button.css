@@ -1,0 +1,19 @@
+.main-button {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+
+  color: var(--second-color);
+  width: 261px;
+  height: 70px;
+  left: 0px;
+  top: 0px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(0, 71, 255, 0.67) 0%,
+    rgba(255, 245, 0, 0.79) 100%
+  );
+  box-shadow: 6px 4px 23px rgba(255, 245, 0, 0.19);
+  border-radius: 16px;
+}
