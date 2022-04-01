@@ -1,0 +1,72 @@
+.radioButton_wrapper {
+  display: flex;
+  align-items: center;
+}
+.radioButton {
+  border: 1px solid;
+  margin-right: 13px;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.radioButton + label::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  margin-right: 13px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 70% 70%;
+}
+.radioButton:checked + label::before {
+  border-color: #000000;
+  background-image: url('./checked.svg');
+  width: 24px;
+  height: 24px;
+}
+.checkBox_label {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  color: #000000;
+}
+.radio_label {
+  display: flex;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  color: #000000;
+}
+
+@media (max-width: 834px) {
+  .radio_label {
+    font-size: 13px;
+  }
+  .radioButton + label::before {
+    width: 20px;
+    height: 20px;
+    margin-right: 13px;
+  }
+  .radioButton:checked + label::before {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media (max-width: 412px) {
+  .radio_label {
+    font-size: 11px;
+  }
+  .radioButton + label::before {
+    margin-right: 7px;
+  }
+}
