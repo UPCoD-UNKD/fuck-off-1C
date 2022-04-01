@@ -1,0 +1,232 @@
+.form_Wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+.groupOfFunctionRadioButton {
+  display: grid;
+  grid-template-columns: 260px 210px 260px;
+  column-gap: 25px;
+  row-gap: 21px;
+  margin-bottom: 40px;
+}
+.groupOfConditionRadioButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 329px;
+  margin-bottom: 40px;
+}
+.groupOfImportantRadioButton {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 25px;
+  row-gap: 21px;
+  margin-bottom: 40px;
+}
+.mainTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
+  letter-spacing: 0.02em;
+  color: #000000;
+  margin-bottom: 21px;
+}
+.subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 40px;
+  width: 399px;
+}
+.form_Title {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #000000;
+  margin-bottom: 21px;
+  width: 382px;
+}
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.form_input_condition_Wrapper {
+  position: relative;
+  height: 54px;
+  margin-bottom: 40px;
+}
+.form_inputWrapper {
+  position: relative;
+  height: 54px;
+  margin-bottom: 21px;
+}
+.form_Button {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 71, 255, 0.67) 0%,
+    rgba(255, 245, 0, 0.79) 100%
+  );
+  box-shadow: 6px 4px 23px rgba(255, 245, 0, 0.19);
+  border-radius: 16px;
+  border: none;
+  width: 261px;
+  height: 70px;
+  margin-bottom: 40px;
+}
+.form_Button:hover {
+  cursor: pointer;
+}
+.form_Button_disable {
+  cursor: not-allowed !important;
+}
+.publicOffer {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 25px;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 21px;
+  width: 338px;
+}
+.publicOffer_link {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 25px;
+  text-align: center;
+  color: #788f81;
+  text-decoration: none;
+}
+.publicOffer_link:visited {
+  color: #788f81;
+}
+.title_link {
+  text-decoration: none;
+  font-size: 19px;
+  color: #788f81;
+}
+.title_link:visited {
+  color: #788f81;
+}
+.prompt {
+  align-self: flex-start;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 25px;
+  color: rgba(0, 0, 0, 0.37);
+}
+.prompt:before {
+  content: '*';
+  color: #ff0000;
+  margin-right: 6px;
+}
+
+@media (max-width: 834px) and (min-width: 789px) {
+  .mainTitle {
+    font-size: 28px;
+    margin-bottom: 14px;
+  }
+  .subtitle {
+    font-size: 13px;
+    margin-bottom: 28px;
+  }
+  .form_Title {
+    font-size: 18px;
+  }
+  .groupOfImportantRadioButton {
+    column-gap: 21px;
+    margin-bottom: 30px;
+  }
+  .groupOfFunctionRadioButton {
+    margin-bottom: 21px;
+    row-gap: 14px;
+  }
+  .title_link {
+    font-size: 18px;
+  }
+  .form_inputWrapper {
+    height: 49px;
+  }
+  .form_Button {
+    margin-bottom: 19px;
+  }
+}
+
+@media (max-width: 789px) and (min-width: 412px) {
+  .groupOfFunctionRadioButton {
+    grid-template-columns: 1fr;
+  }
+}
+
+ {
+}
+@media (max-width: 412px) {
+  .mainTitle {
+    font-size: 23px;
+    margin-bottom: 10px;
+  }
+  .subtitle {
+    font-size: 11px;
+    margin-bottom: 20px;
+  }
+  .form_Title {
+    font-size: 15px;
+    width: 300px;
+  }
+  .groupOfImportantRadioButton {
+    margin-bottom: 20px;
+  }
+  .groupOfFunctionRadioButton {
+    margin-bottom: 20px;
+    grid-template-columns: 230px;
+    row-gap: 10px;
+  }
+  .groupOfConditionRadioButton {
+    width: 280px;
+  }
+  .title_link {
+    font-size: 15px;
+  }
+  .form_inputWrapper {
+    height: 44px;
+  }
+  .form_Button {
+    margin-bottom: 8px;
+    width: 200px;
+    height: 63px;
+  }
+  .formContainer {
+    margin-bottom: 20px;
+  }
+}

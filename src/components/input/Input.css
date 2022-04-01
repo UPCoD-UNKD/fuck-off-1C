@@ -1,0 +1,66 @@
+.form_input {
+  width: 566px;
+  height: 54px;
+  border-radius: 14px;
+  box-shadow: 5px 5px 37px rgba(0, 0, 0, 0.08);
+  border: none;
+  outline: none;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  color: #000000;
+  padding-left: 21px;
+}
+
+.form_input_placeholder::placeholder {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  color: rgba(0, 0, 0, 0.37);
+  padding-left: 21px;
+}
+.star {
+  margin-left: 6px;
+  color: #ff0000;
+}
+.starPlaceHolder {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  color: rgba(0, 0, 0, 0.16);
+  position: absolute;
+  top: 39%;
+  left: 7%;
+}
+@media (max-width: 834px) {
+  .form_input {
+    width: 512px;
+    height: 49px;
+  }
+  .form_input_placeholder::placeholder {
+    font-size: 13px;
+    padding-left: 19px;
+  }
+}
+
+@media (max-width: 561px) and (min-width: 412px) {
+  .form_input {
+    width: 380px;
+  }
+}
+@media (max-width: 412px) {
+  .form_input {
+    width: 345px;
+    height: 44px;
+  }
+  .form_input_placeholder::placeholder {
+    font-size: 11px;
+    padding-left: 19px;
+  }
+}
