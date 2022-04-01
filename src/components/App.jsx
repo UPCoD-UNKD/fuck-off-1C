@@ -1,8 +1,9 @@
+import FormOrganization from "./form_organization/FormOrganization";
+
 export const App = () => {
   return (
     <div
       style={{
-        height: '100vh',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -10,7 +11,7 @@ export const App = () => {
         color: '#010101',
       }}
     >
-      Вiдмова вiд 1С
+      <FormOrganization/>
     </div>
   );
 };
