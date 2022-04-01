@@ -8,11 +8,22 @@ import './Footer.css';
 export const Footer = () => {
   return (
     <div className="footer">
-      <Logo />
+      <a href="https://" target="_blank" rel="noreferrer noopener">
+        <Logo />
+      </a>
       <div className="footer-contacts">
         <p className="footer-contacts-title item">Контакти</p>
-        <PhoneBlk className="item" />
-        <Linkedin className="item" />
+        <a className="item" href="tel:+380441111111">
+          <PhoneBlk />
+        </a>
+        <a
+          className="item"
+          href="https://www.linkedin.com/"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <Linkedin />
+        </a>
       </div>
       <AnchorLink href="#header">
         <Up />

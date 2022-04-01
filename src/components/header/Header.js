@@ -6,7 +6,9 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 export const Header = () => {
   return (
     <div className="header" id="header">
-      <Logo />
+      <a href="https://" target="_blank" rel="noreferrer noopener">
+        <Logo />
+      </a>
       <ul className="nav-list">
         <li className="nav-item">
           <AnchorLink class="nav-link" href="#main">
@@ -31,7 +33,9 @@ export const Header = () => {
       </ul>
       <div className="contacts">
         <p className="contacts-title">Контакти</p>
-        <Phone />
+        <a href="tel:+380441111111">
+          <Phone />
+        </a>
       </div>
     </div>
   );
