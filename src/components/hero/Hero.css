@@ -1,8 +1,8 @@
 .hero {
+  position: relative;
   margin-bottom: 20px;
   padding: 53px 65px 37px 65px;
   max-width: 100%;
-  /* background-color: var(--second-accent-color); */
   color: var(--second-color);
   background: linear-gradient(
       295.61deg,
@@ -10,9 +10,21 @@
       rgba(57, 57, 57, 0.71) 100%
     ),
     url('../../img/HeroBg.jpg');
+
   background-size: cover;
 }
-
+.bg2 {
+  position: absolute;
+  left: 70%;
+  top: 43%;
+  max-width: 630px;
+}
+.bg1 {
+  position: absolute;
+  left: 55%;
+  top: 25%;
+  max-width: 530px;
+}
 .main {
   width: 428px;
   margin-left: 165px;

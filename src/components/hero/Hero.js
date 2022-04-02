@@ -24,6 +24,8 @@ export const Hero = () => {
         <Down className="down-t" />
         Далі
       </AnchorLink>
+      <img className="bg2" src={require('../../img/Planet.png')} alt="planet" />
+      <img className="bg1" src={require('../../img/No1C.png')} alt="no1c" />
     </div>
   );
 };
