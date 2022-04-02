@@ -30,20 +30,23 @@
   color: var(--accent-color);
 }
 
-@media (max-width: 834px){
-.who_text, .why-box-1-text, .accent{
-  font-size: 13px;
-}
+@media (max-width: 834px) {
+  .who_text,
+  .why-box-1-text,
+  .accent {
+    font-size: 13px;
+  }
   .title {
     font-size: 22px;
   }
-  .why-box-3-text, .why-box-2-text{
+  .why-box-3-text,
+  .why-box-2-text {
     font-size: 13px;
   }
   h4 {
     font-size: 18px;
   }
-  .why-box_item{
+  .why-box_item {
     width: 350px;
   }
   .why-box-1-part {
@@ -51,27 +54,27 @@
     justify-content: center;
     margin: 0 0 21px;
   }
-
 }
-@media (max-width: 421px){
+@media (max-width: 428px) {
   .why-box-2-part {
     flex-direction: column;
   }
-  .mission_title{
+  .mission_title {
     font-size: 23px;
   }
-  .title{
+  .title {
     font-size: 19px;
     margin-bottom: 10px;
   }
-  .who_text, .accent{
+  .who_text,
+  .accent {
     font-size: 11px;
   }
-.who{
-  margin-bottom: 20px;
-}
-  .why-box-1-text, .why-box-2-text {
+  .who {
+    margin-bottom: 20px;
+  }
+  .why-box-1-text,
+  .why-box-2-text {
     font-size: 11px;
   }
 }
-

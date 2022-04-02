@@ -1,7 +1,7 @@
 import { Button } from '../button/Button';
 import { Header } from '../header/Header';
 import { ReactComponent as Down } from '../../img/icon/Down.svg';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
+import AnchorLink from 'react-anchor-link-smooth-scroll-v2';
 import './Hero.css';
 
 export const Hero = () => {

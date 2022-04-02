@@ -1,6 +1,5 @@
 .header {
   display: flex;
-  margin-bottom: 219px;
   justify-content: space-between;
 }
 
@@ -12,8 +11,20 @@
   font-size: 15px;
   line-height: 18px;
 }
+@media (max-width: 834px) {
+  .nav-item {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
 .nav-item:not(:last-child) {
   margin-right: 43px;
+}
+@media (max-width: 834px) {
+  .nav-item:not(:last-child) {
+    margin-right: 27px;
+  }
 }
 .contacts {
   display: flex;
@@ -23,4 +34,33 @@
   font-size: 14px;
   line-height: 17px;
   margin-right: 18px;
+}
+@media (max-width: 834px) {
+  .contacts-title {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    margin-right: 18px;
+  }
+  .logo-header {
+    width: 146px;
+  }
+}
+@media (max-width: 428px) {
+  .header {
+    flex-direction: column;
+    position: relative;
+  }
+  /* .header:not(:last-child) {
+    align-items: flex-start;
+  } */
+  .logo-header {
+    width: 102px;
+    margin-bottom: 18px;
+    align-self: flex-start;
+  }
+  .contacts {
+    position: absolute;
+    right: 0;
+  }
 }

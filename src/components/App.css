@@ -4,6 +4,20 @@
   overflow: hidden;
   background: url('../img/PlanetLight.png');
   background-repeat: no-repeat;
-  background-size: 45%;
   background-position: -33% 55%;
+}
+
+@media (max-width: 834px) {
+  .app {
+    max-width: 900px;
+    background-position: -100% 57%;
+    background-size: 543px;
+  }
+}
+@media (max-width: 428px) {
+  .app {
+    max-width: 428px;
+    background-position: -250% 50%;
+    background-size: 344px;
+  }
 }
