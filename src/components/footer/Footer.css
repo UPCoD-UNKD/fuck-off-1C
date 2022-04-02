@@ -9,3 +9,37 @@
 .item:not(:last-child) {
   margin-right: 18px;
 }
+.footer-contacts-title{
+  font-size: 14px ;
+}
+.footer-bottom-row{
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+}
+
+@media (max-width: 834px){
+  .footer-contacts-title {
+    font-size: 13px;
+  }
+}
+@media (max-width: 538px) {
+  .footer {
+    flex-direction: column;
+  }
+  .footer-logo {
+    margin-bottom: 18px;
+  }
+  .footer-contacts-title {
+    font-size: 12px;
+  }
+  .footer-bottom-row{
+    width: 345px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .footer-arrow-up{
+    height:36px;
+  }
+}
