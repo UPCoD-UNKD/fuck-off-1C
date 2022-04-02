@@ -11,22 +11,22 @@ export const Header = () => {
       </a>
       <ul className="nav-list">
         <li className="nav-item">
-          <AnchorLink class="nav-link" href="#main">
+          <AnchorLink className="nav-link" href="#main">
             Головна
           </AnchorLink>
         </li>
         <li className="nav-item">
-          <AnchorLink class="nav-link" href="#mission">
+          <AnchorLink className="nav-link" href="#mission">
             Наша місія
           </AnchorLink>
         </li>
         <li className="nav-item">
-          <AnchorLink class="nav-link" href="#form">
+          <AnchorLink className="nav-link" href="#form">
             Ваша думка
           </AnchorLink>
         </li>
         <li className="nav-item">
-          <AnchorLink class="nav-link" href="#refuse">
+          <AnchorLink className="nav-link" href="#refuse">
             Відмовитись
           </AnchorLink>
         </li>

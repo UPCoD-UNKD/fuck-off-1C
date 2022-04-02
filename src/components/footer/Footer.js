@@ -8,9 +8,10 @@ import './Footer.css';
 export const Footer = () => {
   return (
     <div className="footer">
-      <a href="https://" target="_blank" rel="noreferrer noopener">
+      <a className="footer-logo" href="https://" target="_blank" rel="noreferrer noopener">
         <Logo />
       </a>
+      <div className="footer-bottom-row">
       <div className="footer-contacts">
         <p className="footer-contacts-title item">Контакти</p>
         <a className="item" href="tel:+380441111111">
@@ -26,8 +27,9 @@ export const Footer = () => {
         </a>
       </div>
       <AnchorLink href="#header">
-        <Up />
+        <Up className = "footer-arrow-up" />
       </AnchorLink>
+      </div>
     </div>
   );
 };
