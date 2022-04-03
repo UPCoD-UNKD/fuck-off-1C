@@ -134,7 +134,7 @@ const FormOrganization = () => {
           value=""
           onChangeHandler={onChangeInputValue}
           name="condition"
-          placeholder="Умови відмови"
+          placeholder="Умови відмови "
           required={true}
         />
       </div>

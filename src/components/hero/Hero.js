@@ -11,9 +11,9 @@ export const Hero = () => {
       <div className="main" id="main">
         <h1 className="main-title">Відмова від 1С</h1>
         <p className="main-description">
-          <span className="accent"> Російська</span> компанія, яка займається
-          комп’ютерними програмами та базою даних, яка має ділове та домашнє
-          призначення.
+          <span className="main-accent"> Російська</span> компанія, яка
+          займається комп’ютерними програмами та базою даних, яка має ділове та
+          домашнє призначення.
         </p>
         <AnchorLink href="#refuse">
           <Button />

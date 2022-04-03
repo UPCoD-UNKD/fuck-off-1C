@@ -19,13 +19,14 @@
   position: absolute;
   left: 70%;
   top: 43%;
-  max-width: 630px;
+  max-width: 100%;
 }
 .bg1 {
   position: absolute;
   left: 55%;
   top: 25%;
-  max-width: 510px;
+  /* max-width: 510px; */
+  max-width: 100%;
 }
 
 .main {
@@ -46,9 +47,9 @@
   margin-bottom: 33px;
 }
 
-.accent {
-  font-size: 18px;
-  line-height: 25px;
+.main-accent {
+  /* font-size: 18px;
+  line-height: 25px; */
   color: var(--accent-color);
 }
 .down {
@@ -84,9 +85,9 @@
     font-size: 16px;
     margin-bottom: 23px;
   }
-  .accent {
+  /* .accent {
     font-size: 16px;
-  }
+  } */
 
   .bg2 {
     left: 57%;
@@ -96,7 +97,8 @@
   .bg1 {
     left: 55%;
     top: 20%;
-    max-width: 430px;
+    max-width: 100%;
+    /* max-width: 430px; */
   }
   .down {
     font-size: 15px;
@@ -119,9 +121,9 @@
     font-size: 13px;
     margin-bottom: 17px;
   }
-  .accent {
+  /* .accent {
     font-size: 13px;
-  }
+  } */
   .bg2 {
     max-width: 322px;
     left: 50%;

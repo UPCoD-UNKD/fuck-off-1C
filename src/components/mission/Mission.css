@@ -18,7 +18,8 @@
   margin-bottom: 21px;
 }
 .why-box-1-part {
-  margin: 0 194px 21px 194px;
+  margin: 0 auto 21px auto;
+  max-width: 480px;
 }
 .why-box-2-part {
   display: flex;
@@ -36,7 +37,8 @@
 
 @media (max-width: 834px) {
   .who_text,
-  .why-box-text {
+  .why-box-text,
+  .accent {
     font-size: 13px;
     line-height: 25px;
   }
@@ -51,7 +53,6 @@
   .why-box-1-part {
     display: flex;
     justify-content: center;
-    margin: 0 0 21px;
   }
 }
 @media (max-width: 428px) {
@@ -67,7 +68,8 @@
     margin-bottom: 10px;
   }
   .who_text,
-  .why-box-text {
+  .why-box-text,
+  .accent {
     font-size: 11px;
   }
   .who {
