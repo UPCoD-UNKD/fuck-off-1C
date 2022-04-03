@@ -117,12 +117,6 @@
   width: 338px;
 }
 .publicOffer_link {
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 25px;
-  text-align: center;
   color: #788f81;
   text-decoration: none;
 }
@@ -153,6 +147,9 @@
 }
 
 @media (max-width: 834px) and (min-width: 789px) {
+  .form_Wrapper {
+    padding: 0 51px;
+  }
   .mainTitle {
     font-size: 28px;
     margin-bottom: 14px;
@@ -179,17 +176,26 @@
     height: 49px;
   }
   .form_Button {
+    font-size: 16px;
+    line-height: 20px;
+    width: 235px;
     margin-bottom: 19px;
   }
 }
 
 @media (max-width: 789px) and (min-width: 412px) {
+  .form_Wrapper {
+    padding: 0 15px;
+  }
   .groupOfFunctionRadioButton {
     grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 412px) {
+  .form_Wrapper {
+    padding: 0 15px;
+  }
   .mainTitle {
     font-size: 23px;
     margin-bottom: 10px;
@@ -220,11 +226,17 @@
     height: 44px;
   }
   .form_Button {
+    font-size: 12px;
+    line-height: 15px;
     margin-bottom: 8px;
     width: 200px;
     height: 63px;
   }
   .formContainer {
     margin-bottom: 20px;
+  }
+  .publicOffer {
+    font-size: 10px;
+    line-height: 19px;
   }
 }
