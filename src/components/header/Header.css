@@ -57,9 +57,7 @@
     font-size: 10px;
     line-height: 12px;
   }
-  /* .header:not(:last-child) {
-    align-items: flex-start;
-  } */
+
   .logo-header {
     width: 102px;
     margin-bottom: 18px;
