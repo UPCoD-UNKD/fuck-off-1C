@@ -1,6 +1,7 @@
 .header {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 219px;
 }
 
 .nav-list {
@@ -11,20 +12,9 @@
   font-size: 15px;
   line-height: 18px;
 }
-@media (max-width: 834px) {
-  .nav-item {
-    font-size: 12px;
-    line-height: 15px;
-  }
-}
 
 .nav-item:not(:last-child) {
   margin-right: 43px;
-}
-@media (max-width: 834px) {
-  .nav-item:not(:last-child) {
-    margin-right: 27px;
-  }
 }
 .contacts {
   display: flex;
@@ -42,14 +32,30 @@
     line-height: 16px;
     margin-right: 18px;
   }
+  .nav-item:not(:last-child) {
+    margin-right: 27px;
+  }
+  .nav-item {
+    font-size: 12px;
+    line-height: 15px;
+  }
   .logo-header {
     width: 146px;
+  }
+
+  .header {
+    margin-bottom: 143px;
   }
 }
 @media (max-width: 428px) {
   .header {
     flex-direction: column;
     position: relative;
+    margin-bottom: 50px;
+  }
+  .nav-item {
+    font-size: 10px;
+    line-height: 12px;
   }
   /* .header:not(:last-child) {
     align-items: flex-start;

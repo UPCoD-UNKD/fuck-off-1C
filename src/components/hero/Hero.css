@@ -14,17 +14,7 @@
 
   background-size: cover;
 }
-@media (max-width: 834px) {
-  .hero {
-    padding: 35px 22px 40px 22px;
-    height: 728px;
-  }
-  .main-title {
-    font-size: 40px;
-    line-height: 49px;
-    margin-bottom: 23px;
-  }
-}
+
 .bg2 {
   position: absolute;
   left: 70%;
@@ -34,17 +24,10 @@
 .bg1 {
   position: absolute;
   left: 55%;
-  top: 170px;
-  max-width: 530px;
+  top: 25%;
+  max-width: 510px;
 }
-@media (max-width: 834px) {
-  .bg2 {
-    max-width: 496px;
-  }
-  .bg1 {
-    max-width: 430px;
-  }
-}
+
 .main {
   position: relative;
   display: flex;
@@ -52,14 +35,9 @@
   align-items: flex-start;
   max-width: 428px;
   left: 165px;
-  top: 219px;
+  /* top: 219px; */
 }
-@media (max-width: 834px) {
-  .main {
-    left: 0;
-    top: 143px;
-  }
-}
+
 .main-title {
   margin-bottom: 33px;
 }
@@ -68,13 +46,10 @@
   line-height: 25px;
   margin-bottom: 33px;
 }
-@media (max-width: 834px) {
-  .main-description {
-    font-size: 16px;
-    margin-bottom: 23px;
-  }
-}
+
 .accent {
+  font-size: 18px;
+  line-height: 25px;
   color: var(--accent-color);
 }
 .down {
@@ -88,24 +63,52 @@
   align-items: flex-end;
   bottom: 5%;
 }
+.down-t {
+  margin-right: 12px;
+}
+@media (max-width: 1199px) {
+  .main {
+    left: 0;
+  }
+}
 @media (max-width: 834px) {
+  .hero {
+    padding: 35px 22px 40px 22px;
+    height: 728px;
+  }
+  .main-title {
+    font-size: 40px;
+    line-height: 49px;
+    margin-bottom: 23px;
+  }
+  .main-description {
+    font-size: 16px;
+    margin-bottom: 23px;
+  }
+  .accent {
+    font-size: 16px;
+  }
+
+  .bg2 {
+    left: 57%;
+    /* top: 25%; */
+    max-width: 496px;
+  }
+  .bg1 {
+    left: 55%;
+    top: 20%;
+    max-width: 430px;
+  }
   .down {
     font-size: 15px;
     max-width: 77px;
   }
-}
-.down-t {
-  margin-right: 12px;
 }
 
 @media (max-width: 428px) {
   .hero {
     padding: 30px 15px;
     height: 668px;
-  }
-  .main {
-    left: 0;
-    top: 110px;
   }
   .main-title {
     font-weight: 700;
@@ -115,8 +118,10 @@
   }
   .main-description {
     font-size: 13px;
-    line-height: 25px;
     margin-bottom: 17px;
+  }
+  .accent {
+    font-size: 13px;
   }
   .bg2 {
     max-width: 322px;
@@ -124,9 +129,9 @@
     top: 58%;
   }
   .bg1 {
-    max-width: 280px;
-    left: 45%;
-    top: 352px;
+    max-width: 260px;
+    left: 22%;
+    top: 55%;
   }
   .down {
     font-size: 13px;
