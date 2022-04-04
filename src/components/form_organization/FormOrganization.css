@@ -105,24 +105,6 @@
 .form_Button_disable {
   cursor: not-allowed !important;
 }
-.publicOffer {
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 25px;
-  text-align: center;
-  color: #000000;
-  margin-bottom: 21px;
-  width: 338px;
-}
-.publicOffer_link {
-  color: #788f81;
-  text-decoration: none;
-}
-.publicOffer_link:visited {
-  color: #788f81;
-}
 .title_link {
   text-decoration: none;
   font-size: 19px;
@@ -235,8 +217,5 @@
   .formContainer {
     margin-bottom: 20px;
   }
-  .publicOffer {
-    font-size: 10px;
-    line-height: 19px;
-  }
+
 }

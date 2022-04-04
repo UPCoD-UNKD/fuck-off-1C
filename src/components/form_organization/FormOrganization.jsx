@@ -60,7 +60,7 @@ const FormOrganization = () => {
         newState[index].value = value;
       }
       setInputData(newState);
-      console.log(newState);
+      // console.log(newState);
     },
     [inputData]
   );
@@ -175,16 +175,6 @@ const FormOrganization = () => {
       >
         Відмовитись від 1С
       </button>
-      <p className="publicOffer">
-        Натискаючи дану кнопку Ви погоджуєтесь з{' '}
-        <a className="publicOffer_link" href="/">
-          політикою оброки даних
-        </a>{' '}
-        та{' '}
-        <a href="/" className="publicOffer_link">
-          публічною офертою
-        </a>
-      </p>
     </div>
   );
 };
