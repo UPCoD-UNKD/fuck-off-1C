@@ -81,6 +81,28 @@
   height: 54px;
   margin-bottom: 21px;
 }
+.donate-button {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--second-accent-color);
+  background-color: inherit;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 14px;
+  margin-bottom: 40px;
+  width: 566px;
+  height: 54px;
+}
+.donate-button:hover,
+.donate-button:focus {
+  border: none;
+  color: var(--second-color);
+  background-color: var(--second-accent-color);
+}
 .form_Button {
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
@@ -100,20 +122,19 @@
   height: 70px;
   margin-bottom: 40px;
 }
-.form_Button:hover {
-  cursor: pointer;
+.form_Button:hover,
+.form_Button:focus {
+  background: linear-gradient(180deg, #0047ff 0%, #fff500 100%);
 }
+
 .form_Button_disable {
   cursor: not-allowed !important;
 }
-.title_link {
-  text-decoration: none;
+.title_accent {
   font-size: 19px;
-  color: #788f81;
+  color: var(--second-accent-color);
 }
-.title_link:visited {
-  color: #788f81;
-}
+
 .prompt {
   align-self: flex-start;
   font-family: 'Montserrat', sans-serif;
@@ -127,6 +148,15 @@
   content: '*';
   color: #ff0000;
   margin-right: 6px;
+}
+@media (max-width: 834px) {
+  .donate-button {
+    width: 512px;
+    height: 49px;
+  }
+  .formContainer {
+    margin-bottom: 25px;
+  }
 }
 
 @media (max-width: 834px) and (min-width: 789px) {
@@ -152,9 +182,7 @@
     margin-bottom: 21px;
     row-gap: 14px;
   }
-  .title_link {
-    font-size: 18px;
-  }
+
   .form_inputWrapper {
     height: 49px;
   }
@@ -177,7 +205,11 @@
     grid-template-columns: 1fr;
   }
 }
-
+@media (max-width: 561px) and (min-width: 412px) {
+  .donate-button {
+    width: 380px;
+  }
+}
 @media (max-width: 412px) {
   .form_Wrapper {
     padding: 0 15px;
@@ -205,8 +237,9 @@
   .groupOfConditionRadioButton {
     width: 280px;
   }
-  .title_link {
-    font-size: 15px;
+  .donate-button {
+    width: 345px;
+    height: 44px;
   }
   .form_inputWrapper {
     height: 44px;
@@ -214,12 +247,8 @@
   .form_Button {
     font-size: 12px;
     line-height: 15px;
-    margin-bottom: 8px;
+    margin-bottom: 50px;
     width: 200px;
     height: 63px;
   }
-  .formContainer {
-    margin-bottom: 20px;
-  }
-
 }
