@@ -1,15 +1,15 @@
 .app {
-  max-width: 1440px;
+  /* max-width: 1440px; */
   margin: 0 auto;
   overflow: hidden;
   background: url('../img/PlanetLight.png');
   background-repeat: no-repeat;
-  background-position: -33% 55%;
+  background-position: -20% 50%;
 }
 
 @media (max-width: 834px) {
   .app {
-    max-width: 900px;
+    /* max-width: 900px; */
     background-position: -100% 57%;
     background-size: 543px;
   }
