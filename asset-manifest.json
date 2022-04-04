@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/fuck-off-1C/static/css/main.f0b2c53b.css",
+    "main.css": "/fuck-off-1C/static/css/main.193c1ca9.css",
     "main.js": "/fuck-off-1C/static/js/main.14cfacd4.js",
     "static/media/Montserrat.ttf": "/fuck-off-1C/static/media/Montserrat.3068cdb43142f5625baf.ttf",
     "static/media/HeroBg.jpg": "/fuck-off-1C/static/media/HeroBg.1520a58c5f4c5972461f.jpg",
@@ -16,11 +16,11 @@
     "static/media/CarbonDev.svg": "/fuck-off-1C/static/media/CarbonDev.c4e18f3303f7e3052a38ce123370fc73.svg",
     "static/media/Down.svg": "/fuck-off-1C/static/media/Down.104707ecaf3c56dae32d1c7ec89d6114.svg",
     "static/media/checked.svg": "/fuck-off-1C/static/media/checked.42c3abfbd89a0c4645fb.svg",
-    "main.f0b2c53b.css.map": "/fuck-off-1C/static/css/main.f0b2c53b.css.map",
+    "main.193c1ca9.css.map": "/fuck-off-1C/static/css/main.193c1ca9.css.map",
     "main.14cfacd4.js.map": "/fuck-off-1C/static/js/main.14cfacd4.js.map"
   },
   "entrypoints": [
-    "static/css/main.f0b2c53b.css",
+    "static/css/main.193c1ca9.css",
     "static/js/main.14cfacd4.js"
   ]
 }
