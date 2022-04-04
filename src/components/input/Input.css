@@ -39,7 +39,7 @@
   font-weight: 400;
   font-size: 15px;
   line-height: 25px;
-  color: rgba(0, 0, 0, 0.16);
+  color: rgba(0, 0, 0, 0.37);
   position: absolute;
   top: 30%;
   left: 4%;
@@ -50,6 +50,10 @@
     height: 49px;
   }
   .form_input_placeholder::placeholder {
+    font-size: 13px;
+    padding-left: 19px;
+  }
+  .starPlaceHolder{
     font-size: 13px;
     padding-left: 19px;
   }

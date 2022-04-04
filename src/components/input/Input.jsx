@@ -1,10 +1,11 @@
 import './Input.css';
 import classNames from 'classnames';
-import { useCallback, useState } from 'react';
+import { useCallback, useRef, useState } from 'react';
 
 const Input = props => {
   const [value, setValue] = useState(props.value);
   const [isHidePlaceholder, setIsHidePlaceholder] = useState(false);
+  const InputRef = useRef(null);
 
   const onChangeHandler = useCallback(
     e => {
@@ -24,10 +25,15 @@ const Input = props => {
     }
   }, []);
 
+  const onClickLabelHandler = useCallback(()=> {
+    setIsHidePlaceholder(true);
+    InputRef.current.focus();
+  },[])
+
   return (
     <>
       {props.required && isHidePlaceholder === false && (
-        <label className="starPlaceHolder">
+        <label className="starPlaceHolder" onClick={onClickLabelHandler}>
           {props.placeholder}
           <span className="star">*</span>
         </label>
@@ -36,6 +42,7 @@ const Input = props => {
         className={classNames('form_input', {
           form_input_placeholder: props.required === false,
         })}
+        ref = {InputRef}
         onFocus={onFocusHandler}
         onBlur={onBlurHandler}
         onChange={onChangeHandler}
