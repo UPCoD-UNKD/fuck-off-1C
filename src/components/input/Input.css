@@ -63,6 +63,9 @@
   .form_input {
     width: 380px;
   }
+  .starPlaceHolder{
+    top: 20%;
+  }
 }
 @media (max-width: 412px) {
   .form_input {
@@ -72,5 +75,10 @@
   .form_input_placeholder::placeholder {
     font-size: 11px;
     padding-left: 19px;
+  }
+  .starPlaceHolder{
+    font-size: 11px;
+    padding-left: 19px;
+    top: 20%;
   }
 }
