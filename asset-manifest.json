@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/fuck-off-1C/static/css/main.ddae45a9.css",
+    "main.css": "/fuck-off-1C/static/css/main.180e25bd.css",
     "main.js": "/fuck-off-1C/static/js/main.7c0a45a3.js",
     "static/media/Montserrat.ttf": "/fuck-off-1C/static/media/Montserrat.3068cdb43142f5625baf.ttf",
     "static/media/HeroBg.jpg": "/fuck-off-1C/static/media/HeroBg.1520a58c5f4c5972461f.jpg",
     "static/media/No1C.png": "/fuck-off-1C/static/media/No1C.081c25f51ff0c68b6ec3.png",
     "static/media/Logo.svg": "/fuck-off-1C/static/media/Logo.6c8dbf731830fd2b1c0b6e6863710818.svg",
-    "static/media/PhoneBlk.svg": "/fuck-off-1C/static/media/PhoneBlk.8316c1920cb6450e2644c3fa050f3d44.svg",
+    "static/media/PhoneBlk.svg": "/fuck-off-1C/static/media/PhoneBlk.bb7486f2887e186ad50794a085f2cc9c.svg",
     "static/media/Phone.svg": "/fuck-off-1C/static/media/Phone.d0e4b1fa85cff25f7ab5b5ef0fe2c72a.svg",
     "index.html": "/fuck-off-1C/index.html",
-    "static/media/Up.svg": "/fuck-off-1C/static/media/Up.c2c3ecdbc7ba10ed411ff47c0c09fcc4.svg",
-    "static/media/PersonCross.svg": "/fuck-off-1C/static/media/PersonCross.26999fef10663da26db669d9b88d0aed.svg",
-    "static/media/Linkedin.svg": "/fuck-off-1C/static/media/Linkedin.864689c7e91b790fa74bfedd98243ace.svg",
-    "static/media/MessageClose.svg": "/fuck-off-1C/static/media/MessageClose.618a0f0d15ff5e768e740f01ed1ba9a3.svg",
-    "static/media/CarbonDev.svg": "/fuck-off-1C/static/media/CarbonDev.c4e18f3303f7e3052a38ce123370fc73.svg",
-    "static/media/Mail.svg": "/fuck-off-1C/static/media/Mail.4fb7afb8e432047ab499c95e4422f07a.svg",
-    "static/media/MailBlk.svg": "/fuck-off-1C/static/media/MailBlk.a4ef58b41f15756bea29eb3a1801886d.svg",
+    "static/media/Up.svg": "/fuck-off-1C/static/media/Up.25a5ce351fd4cc3ab8ff0d7d7b74d8ef.svg",
+    "static/media/PersonCross.svg": "/fuck-off-1C/static/media/PersonCross.ff081199969a8f0a7e96bec54552fe2e.svg",
+    "static/media/Linkedin.svg": "/fuck-off-1C/static/media/Linkedin.11db7032f32500bb60a5ec0eedb14a13.svg",
+    "static/media/MessageClose.svg": "/fuck-off-1C/static/media/MessageClose.bab817ae8b41830b4c1a81c73bd4859e.svg",
+    "static/media/CarbonDev.svg": "/fuck-off-1C/static/media/CarbonDev.35bb6d3bbac811b371ba09dd029febe5.svg",
+    "static/media/Mail.svg": "/fuck-off-1C/static/media/Mail.c0cdf372bca049aa5649aaa858ba1c0c.svg",
+    "static/media/MailBlk.svg": "/fuck-off-1C/static/media/MailBlk.f71b8d38a73ecfc95fd445047ca41ebb.svg",
     "static/media/Down.svg": "/fuck-off-1C/static/media/Down.104707ecaf3c56dae32d1c7ec89d6114.svg",
-    "static/media/checked.svg": "/fuck-off-1C/static/media/checked.42c3abfbd89a0c4645fb.svg",
-    "main.ddae45a9.css.map": "/fuck-off-1C/static/css/main.ddae45a9.css.map",
+    "static/media/checked.svg": "/fuck-off-1C/static/media/checked.46ee91ca90aefc3ba0f9.svg",
+    "main.180e25bd.css.map": "/fuck-off-1C/static/css/main.180e25bd.css.map",
     "main.7c0a45a3.js.map": "/fuck-off-1C/static/js/main.7c0a45a3.js.map"
   },
   "entrypoints": [
-    "static/css/main.ddae45a9.css",
+    "static/css/main.180e25bd.css",
     "static/js/main.7c0a45a3.js"
   ]
 }
