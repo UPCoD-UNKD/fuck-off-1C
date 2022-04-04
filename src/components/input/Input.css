@@ -13,20 +13,14 @@
   color: #000000;
   padding: 10px 21px;
 }
-/* .placeholder:after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  color: red;
-  content: '*';
-} */
+
 .form_input_placeholder::placeholder {
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
   line-height: 25px;
-  color: rgba(0, 0, 0, 0.37);
+  color: rgba(0, 0, 0, 0.4);
 }
 
 .star {
@@ -53,9 +47,8 @@
     font-size: 13px;
     padding-left: 19px;
   }
-  .starPlaceHolder{
+  .starPlaceHolder {
     font-size: 13px;
-    padding-left: 19px;
   }
 }
 

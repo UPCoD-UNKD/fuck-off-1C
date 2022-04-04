@@ -26,7 +26,7 @@ const FormOrganization = () => {
       id: 'fullName',
       type: 'text',
       name: 'fullName',
-      placeholder: 'ФІО',
+      placeholder: 'ПІБ',
       required: true,
       value: '',
     },
@@ -42,7 +42,7 @@ const FormOrganization = () => {
       id: 'email',
       type: 'email',
       name: 'email',
-      placeholder: 'email',
+      placeholder: 'Email',
       required: true,
       value: '',
     },
@@ -115,17 +115,16 @@ const FormOrganization = () => {
 
       <span className="form_Title" id="refuse">
         Чи готові Ви перейти на{' '}
-        <a href="/" className="form_Title title_link">
-          український
-        </a>{' '}
-        аналог?
+        <span className="form_Title title_accent">український</span> аналог?
       </span>
       <div className="groupOfConditionRadioButton">
         <CheckBox name={'ofCondition'} labelText="Так" isChecked={true} />
         <CheckBox name={'ofCondition'} labelText="Ні" />
         <CheckBox name={'ofCondition'} labelText="За умови" />
       </div>
-
+      <button className="donate-button" type="button">
+        ПІДТРИМАТИ ПРОЕКТ
+      </button>
       <div className="form_input_condition_Wrapper">
         <Input
           for="01_form_organization"

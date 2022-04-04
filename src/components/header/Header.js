@@ -1,4 +1,5 @@
 import { ReactComponent as Logo } from '../../img/icon/Logo.svg';
+import { ReactComponent as Mail } from '../../img/icon/Mail.svg';
 import { ReactComponent as Phone } from '../../img/icon/Phone.svg';
 import './Header.css';
 import AnchorLink from 'react-anchor-link-smooth-scroll-v2';
@@ -6,14 +7,8 @@ import AnchorLink from 'react-anchor-link-smooth-scroll-v2';
 export const Header = () => {
   return (
     <div className="header" id="header">
-      <a
-        className="logo-header"
-        href="https://"
-        target="_blank"
-        rel="noreferrer noopener"
-      >
-        <Logo />
-      </a>
+      <Logo className="logo-header" />
+
       <ul className="nav-list">
         <li className="nav-item">
           <AnchorLink className="nav-link" href="#main">
@@ -37,8 +32,10 @@ export const Header = () => {
         </li>
       </ul>
       <div className="contacts">
-        <p className="contacts-title">Контакти</p>
-        <a href="tel:+380441111111">
+        <a className="contacts-item icon" href="mailto:test@test.com">
+          <Mail />
+        </a>
+        <a className="icon" href="tel:">
           <Phone />
         </a>
       </div>
