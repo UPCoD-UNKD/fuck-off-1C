@@ -28,7 +28,38 @@
   line-height: 25px;
   color: rgba(0, 0, 0, 0.37);
 }
-
+.form_input_placeholder::-webkit-input-placeholder{
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  color: rgba(0, 0, 0, 0.37);
+}
+.form_input_placeholder::-moz-placeholder{
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  color: rgba(0, 0, 0, 0.37);
+}
+.form_input_placeholder:-ms-input-placeholder{
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  color: rgba(0, 0, 0, 0.37);
+}
+.form_input_placeholder:-moz-placeholder{
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  color: rgba(0, 0, 0, 0.37);
+}
 .star {
   margin-left: 6px;
   color: #ff0000;
@@ -53,6 +84,22 @@
     font-size: 13px;
     padding-left: 19px;
   }
+  .form_input_placeholder::-webkit-input-placeholder{
+    font-size: 13px;
+    padding-left: 19px;
+  }
+  .form_input_placeholder::-moz-placeholder{
+    font-size: 13px;
+    padding-left: 19px;
+  }
+  .form_input_placeholder:-ms-input-placeholder{
+    font-size: 13px;
+    padding-left: 19px;
+  }
+  .form_input_placeholder:-moz-placeholder{
+    font-size: 13px;
+    padding-left: 19px;
+  }
   .starPlaceHolder{
     font-size: 13px;
     padding-left: 19px;
@@ -72,9 +119,25 @@
     width: 345px;
     height: 44px;
   }
-  .form_input_placeholder::placeholder {
+  .form_input_placeholder::placeholder{
     font-size: 11px;
-    padding-left: 19px;
+    padding-left: 18px;
+  }
+  .form_input_placeholder::-webkit-input-placeholder{
+    font-size: 11px;
+    padding-left: 18px;
+  }
+  .form_input_placeholder::-moz-placeholder{
+    font-size: 11px;
+    padding-left: 18px;
+  }
+  .form_input_placeholder:-ms-input-placeholder{
+    font-size: 11px;
+    padding-left: 18px;
+  }
+  .form_input_placeholder:-moz-placeholder{
+    font-size: 11px;
+    padding-left: 18px;
   }
   .starPlaceHolder{
     font-size: 11px;
