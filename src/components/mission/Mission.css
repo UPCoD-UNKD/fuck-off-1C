@@ -30,7 +30,10 @@
   flex-direction: column;
   max-height: 195px;
 }
-
+.bgLeft {
+  position: absolute;
+  z-index: -1;
+}
 .accent {
   color: var(--accent-color);
 }
@@ -40,7 +43,7 @@
   .why-box-text,
   .accent {
     font-size: 13px;
-    line-height: 25px;
+    line-height: 18px;
   }
   .title {
     font-size: 18px;

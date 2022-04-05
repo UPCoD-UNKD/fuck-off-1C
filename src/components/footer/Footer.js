@@ -9,9 +9,10 @@ import './Footer.css';
 export const Footer = () => {
   return (
     <div className="footer">
-      <Logo className="footer-logo" />
-
       <div className="footer-bottom-row">
+        <AnchorLink offset="100" href="#header">
+          <Up className="footer-arrow-up" />
+        </AnchorLink>
         <div className="footer-contacts">
           <a className="footer-contacts-item" href="mailto:test@test.com">
             <MailBlk />
@@ -28,10 +29,8 @@ export const Footer = () => {
             <Linkedin />
           </a>
         </div>
-        <AnchorLink offset="100" href="#header">
-          <Up className="footer-arrow-up" />
-        </AnchorLink>
       </div>
+      <Logo className="footer-logo" />
     </div>
   );
 };
