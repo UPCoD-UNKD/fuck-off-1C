@@ -23,10 +23,11 @@
 
 .footer-bottom-row {
   display: flex;
-  width: 50%;
+  width: 55%;
   justify-content: space-between;
 }
 .footer-arrow-up {
+  height: 100%;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
 }
@@ -38,22 +39,23 @@
 
 @media (max-width: 834px) {
   .footer {
-    padding: 0 15px 35px 15px;
+    padding: 0 30px 35px 30px;
   }
 }
 @media (max-width: 538px) {
   .footer {
     flex-direction: column;
     padding-bottom: 30px;
+    flex-direction: column-reverse;
   }
   .footer-logo {
     margin-bottom: 18px;
   }
 
   .footer-bottom-row {
-    width: 345px;
+    width: 100%;
     display: flex;
-    flex-direction: row-reverse;
+
     justify-content: space-between;
   }
   .footer-arrow-up {

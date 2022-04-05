@@ -1,6 +1,6 @@
 import { Button } from '../button/Button';
 import { Header } from '../header/Header';
-import { ReactComponent as Down } from '../../img/icon/Down.svg';
+import RightEarth from '../../style/backgroond/RightEarth';
 import AnchorLink from 'react-anchor-link-smooth-scroll-v2';
 import './Hero.css';
 
@@ -20,11 +20,10 @@ export const Hero = () => {
         </AnchorLink>
       </div>
 
-      <AnchorLink className="down" href="#mission">
-        <Down className="down-t" />
-        Далі
-      </AnchorLink>
-      <img className="bg2" src={require('../../img/Planet.png')} alt="planet" />
+      <div className="bg2">
+        <RightEarth style={{ maxWidth: '100%' }} />
+      </div>
+      {/* <img className="bg2" src={require('../../img/Planet.png')} alt="planet" /> */}
       <img className="bg1" src={require('../../img/No1C.png')} alt="no1c" />
     </div>
   );
