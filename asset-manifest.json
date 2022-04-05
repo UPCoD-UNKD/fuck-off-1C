@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/fuck-off-1C/static/css/main.0390ece3.css",
-    "main.js": "/fuck-off-1C/static/js/main.07c2679e.js",
+    "main.css": "/fuck-off-1C/static/css/main.87c1cb74.css",
+    "main.js": "/fuck-off-1C/static/js/main.bcf3fb1d.js",
     "static/media/Montserrat.ttf": "/fuck-off-1C/static/media/Montserrat.3068cdb43142f5625baf.ttf",
     "static/media/HeroBg.jpg": "/fuck-off-1C/static/media/HeroBg.1520a58c5f4c5972461f.jpg",
     "static/media/No1C.png": "/fuck-off-1C/static/media/No1C.081c25f51ff0c68b6ec3.png",
@@ -18,11 +18,11 @@
     "static/media/Mail.svg": "/fuck-off-1C/static/media/Mail.4fb7afb8e432047ab499c95e4422f07a.svg",
     "static/media/Up.svg": "/fuck-off-1C/static/media/Up.b36086adc1f72b14a979fddeba98a8fb.svg",
     "static/media/checked.svg": "/fuck-off-1C/static/media/checked.42c3abfbd89a0c4645fb.svg",
-    "main.0390ece3.css.map": "/fuck-off-1C/static/css/main.0390ece3.css.map",
-    "main.07c2679e.js.map": "/fuck-off-1C/static/js/main.07c2679e.js.map"
+    "main.87c1cb74.css.map": "/fuck-off-1C/static/css/main.87c1cb74.css.map",
+    "main.bcf3fb1d.js.map": "/fuck-off-1C/static/js/main.bcf3fb1d.js.map"
   },
   "entrypoints": [
-    "static/css/main.0390ece3.css",
-    "static/js/main.07c2679e.js"
+    "static/css/main.87c1cb74.css",
+    "static/js/main.bcf3fb1d.js"
   ]
 }
