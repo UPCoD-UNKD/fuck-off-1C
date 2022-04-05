@@ -20,11 +20,11 @@ export const Hero = () => {
         </AnchorLink>
       </div>
 
-      <div className="bg2">
+      <div className="bgPlanet">
         <RightEarth />
       </div>
-      {/* <img className="bg2" src={require('../../img/Planet.png')} alt="planet" /> */}
-      <img className="bg1" src={require('../../img/No1C.png')} alt="no1c" />
+
+      <img className="bgNo1C" src={require('../../img/No1C.png')} alt="no1c" />
     </div>
   );
 };
