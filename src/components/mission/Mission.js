@@ -22,7 +22,7 @@ export const Mission = () => {
             <div className="why-box-1-part">
               <li className="why-box_item">
                 <CarbonDev />
-                <h4 className="title">Фінансування агресора</h4>
+                <h4 className="why-title">Фінансування агресора</h4>
                 <p className="why-box-text">
                   Зараз важливо розуміти, що використання програмного
                   забезпечення під час війни в Україні - це фінансування армії
@@ -33,7 +33,7 @@ export const Mission = () => {
             <div className="why-box-2-part">
               <li className="why-box_item">
                 <MessageClose />
-                <h4 className="title">Підтримка агресора</h4>
+                <h4 className="why-title">Підтримка агресора</h4>
                 <p className="why-box-text">
                   Продовжуючи використовувати 1С ви підтримуєте економіку
                   <span className="accent"> росії</span>, фінансуєте її майбутні
@@ -42,7 +42,7 @@ export const Mission = () => {
               </li>
               <li className="why-box_item">
                 <PersonCross />
-                <h4 className="title">Нестача фахівців</h4>
+                <h4 className="why-title">Нестача фахівців</h4>
                 <p className="why-box-text">
                   Для підтримання функціонування 1С потрібні фахівці. На фоні
                   масової відмови від 1С таких спеціалістів буде ставати все

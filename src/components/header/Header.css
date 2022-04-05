@@ -8,7 +8,6 @@
   display: flex;
 }
 .nav-item {
-  font-weight: 300;
   font-size: 15px;
   line-height: 18px;
 }
@@ -58,6 +57,7 @@
 }
 @media (max-width: 729px) and (min-width: 429px) {
   .nav-item {
+    font-weight: 300;
     font-size: 10px;
     line-height: 13px;
   }

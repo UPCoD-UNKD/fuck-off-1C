@@ -21,7 +21,7 @@ export const Hero = () => {
       </div>
 
       <div className="bg2">
-        <RightEarth style={{ maxWidth: '100%' }} />
+        <RightEarth />
       </div>
       {/* <img className="bg2" src={require('../../img/Planet.png')} alt="planet" /> */}
       <img className="bg1" src={require('../../img/No1C.png')} alt="no1c" />

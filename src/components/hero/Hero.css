@@ -19,14 +19,11 @@
   position: absolute;
   right: 0;
   top: 45%;
-  /* max-width: 100%; */
 }
 .bg1 {
   position: absolute;
   left: 55%;
   top: 25%;
-
-  max-width: 100%;
 }
 
 .main {
@@ -39,6 +36,8 @@
 }
 
 .main-title {
+  font-size: 50px;
+  line-height: 61px;
   margin-bottom: 33px;
 }
 .main-description {
@@ -95,10 +94,6 @@
     margin-bottom: 23px;
   }
 
-  .bg2 {
-    /* left: 57%; */
-    /* top: 25%; */
-  }
   .bg1 {
     left: 55%;
     top: 20%;
@@ -130,11 +125,7 @@
   /* .accent {
     font-size: 13px;
   } */
-  /* .bg2 {
-    max-width: 322px;
-    left: 50%;
-    top: 58%;
-  } */
+
   .bg1 {
     max-width: 260px;
     left: 22%;
