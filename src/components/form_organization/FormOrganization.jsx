@@ -48,9 +48,41 @@ const FormOrganization = () => {
     },
   ]);
 
-  const onclickButton = useCallback(() => {
-    // send data
-  }, []);
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+
+  const onclickButton = useCallback((e) => {
+    // get end send data
+    e.preventDefault();
+    console.log(document.forms[0]);
+    console.log(inputData);
+  }, [inputData]);
+
+  const isCheckedFormInputs = useCallback(()=> {
+    const regForMail = new RegExp("^([a-z0-9_-]+\\.)*[a-z0-9_-]+@[a-z0-9_-]+(\\.[a-z0-9_-]+)*\\.[a-z]{2,6}$");
+    const regForPhone = new RegExp("^(\\+3)\\d{11}$")
+
+    inputData.forEach(field => {
+      if(field.type === "email" || field.type === "tel"){
+        switch (field.type){
+          case("email"): {
+            const testResult = !regForMail.test(field.value);
+            setIsButtonDisabled(testResult);
+            break;
+          }
+          case("tel"): {
+            const testResult = !regForPhone.test(field.value);
+            setIsButtonDisabled(testResult);
+            break;
+          }
+        }
+      } else {
+        if(field.value !== ""){
+          setIsButtonDisabled(false);
+        }
+      }
+
+    })
+  },[inputData])
 
   const onChangeInputValue = useCallback(
     (id, value) => {
@@ -60,13 +92,15 @@ const FormOrganization = () => {
         newState[index].value = value;
       }
       setInputData(newState);
-      // console.log(newState);
+      isCheckedFormInputs();
     },
-    [inputData]
+    [inputData, isCheckedFormInputs]
   );
 
+
+
   return (
-    <div className="form_Wrapper" id="form">
+    <form className="form_Wrapper" id="form">
       <h3 className="mainTitle">Ваша думка</h3>
       <span className="subtitle">
         Дане опитування допоможе нам почути Вашу думку.
@@ -74,43 +108,43 @@ const FormOrganization = () => {
       <span className="form_Title">Які функції 1С для Вас пріоритетні?</span>
       <div className="groupOfFunctionRadioButton">
         <CheckBox
-          name={'ofFunction'}
+          name={'plant'}
           labelText="Управління виробництвом та облік витрат"
         />
         <CheckBox
-          name={'ofFunction'}
+          name={'logic'}
           labelText="Логістика і закупівля"
           isChecked={true}
         />
-        <CheckBox name={'ofFunction'} labelText="Управлінській облік" />
+        <CheckBox name={'management'} labelText="Управлінській облік" />
         <CheckBox
-          name={'ofFunction'}
+          name={'erp'}
           labelText="Коплексне управління підприємствами (ERP)"
         />
-        <CheckBox name={'ofFunction'} labelText="Роздрібна торгівля" />
-        <CheckBox name={'ofFunction'} labelText="Фінансове  планування" />
+        <CheckBox name={'trade'} labelText="Роздрібна торгівля" />
+        <CheckBox name={'finance'} labelText="Фінансове  планування" />
         <CheckBox
-          name={'ofFunction'}
+          name={'crm'}
           labelText="Управління взаємовідносинами з клієнтами (CRM)"
         />
-        <CheckBox name={'ofFunction'} labelText="Бухгалтерській облік" />
-        <CheckBox name={'ofFunction'} labelText="Управління документообігом" />
-        <CheckBox name={'ofFunction'} labelText="Товарно-складський облік" />
-        <CheckBox name={'ofFunction'} labelText="Кадровий облік" />
+        <CheckBox name={'accounting'} labelText="Бухгалтерській облік" />
+        <CheckBox name={'document'} labelText="Управління документообігом" />
+        <CheckBox name={'product'} labelText="Товарно-складський облік" />
+        <CheckBox name={'employ'} labelText="Кадровий облік" />
       </div>
 
       <span className="form_Title">Що для Вас важливо в 1С?</span>
       <div className="groupOfImportantRadioButton">
-        <CheckBox name={'ofImportant'} labelText="Легкість використання" />
-        <CheckBox name={'ofImportant'} labelText="Дизайн" />
-        <CheckBox name={'ofImportant'} labelText="Ціна" />
+        <CheckBox name={'easyUse'} labelText="Легкість використання" />
+        <CheckBox name={'design'} labelText="Дизайн" />
+        <CheckBox name={'price'} labelText="Ціна" />
         <CheckBox
-          name={'ofImportant'}
+          name={'easy'}
           labelText="Легкість освоєння"
           isChecked={true}
         />
-        <CheckBox name={'ofImportant'} labelText="Зручний інтерфейс" />
-        <CheckBox name={'ofImportant'} labelText="Інше" />
+        <CheckBox name={'interface'} labelText="Зручний інтерфейс" />
+        <CheckBox name={'other'} labelText="Інше" />
       </div>
 
       <span className="form_Title" id="refuse">
@@ -141,10 +175,8 @@ const FormOrganization = () => {
         Від імені якої організації Ви виступаєте?
       </span>
       <div className="formContainer">
-        <form
+        <div
           className="form"
-          action=""
-          method="post"
           id="01_form_organization"
         >
           {inputData.map((input, index) => {
@@ -162,19 +194,19 @@ const FormOrganization = () => {
               </div>
             );
           })}
-        </form>
+        </div>
         <span className="prompt">обов’язкові поля</span>
       </div>
 
       <button
-        disabled={true}
+        disabled={isButtonDisabled}
         onClick={onclickButton}
-        className={classNames('form_Button', { form_Button_disable: true })}
+        className={classNames('form_Button', { form_Button_disable: isButtonDisabled })}
         form="01_form_organization"
       >
         Відмовитись від 1С
       </button>
-    </div>
+    </form>
   );
 };
 

@@ -69,6 +69,9 @@
   top: 30%;
   left: 4%;
 }
+.form_input_error {
+  border: 1px solid #ff0000;
+}
 @media (max-width: 834px) {
   .form_input {
     width: 512px;
@@ -79,7 +82,7 @@
     padding-left: 19px;
   }
 
-  
+
   .form_input_placeholder::-webkit-input-placeholder{
     font-size: 13px;
     padding-left: 19px;
