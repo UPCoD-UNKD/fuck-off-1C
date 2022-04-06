@@ -10,8 +10,8 @@ const FormOrganization = () => {
       id: 'organization',
       type: 'text',
       name: 'organization',
-      placeholder: 'Організація',
-      required: true,
+      placeholder: 'Податковий номер',
+      required: false,
       value: '',
     },
     {
@@ -50,39 +50,43 @@ const FormOrganization = () => {
 
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
-  const onclickButton = useCallback((e) => {
-    // get end send data
-    e.preventDefault();
-    console.log(document.forms[0]);
-    console.log(inputData);
-  }, [inputData]);
+  const onclickButton = useCallback(
+    e => {
+      // get end send data
+      e.preventDefault();
+      console.log(document.forms[0]);
+      console.log(inputData);
+    },
+    [inputData]
+  );
 
-  const isCheckedFormInputs = useCallback(()=> {
-    const regForMail = new RegExp("^([a-z0-9_-]+\\.)*[a-z0-9_-]+@[a-z0-9_-]+(\\.[a-z0-9_-]+)*\\.[a-z]{2,6}$");
-    const regForPhone = new RegExp("^(\\+3)\\d{11}$")
+  const isCheckedFormInputs = useCallback(() => {
+    const regForMail = new RegExp(
+      '^([a-z0-9_-]+\\.)*[a-z0-9_-]+@[a-z0-9_-]+(\\.[a-z0-9_-]+)*\\.[a-z]{2,6}$'
+    );
+    const regForPhone = new RegExp('^(\\+3)\\d{11}$');
 
     inputData.forEach(field => {
-      if(field.type === "email" || field.type === "tel"){
-        switch (field.type){
-          case("email"): {
+      if (field.type === 'email' || field.type === 'tel') {
+        switch (field.type) {
+          case 'email': {
             const testResult = !regForMail.test(field.value);
             setIsButtonDisabled(testResult);
             break;
           }
-          case("tel"): {
+          case 'tel': {
             const testResult = !regForPhone.test(field.value);
             setIsButtonDisabled(testResult);
             break;
           }
         }
       } else {
-        if(field.value !== ""){
+        if (field.value !== '') {
           setIsButtonDisabled(false);
         }
       }
-
-    })
-  },[inputData])
+    });
+  }, [inputData]);
 
   const onChangeInputValue = useCallback(
     (id, value) => {
@@ -96,8 +100,6 @@ const FormOrganization = () => {
     },
     [inputData, isCheckedFormInputs]
   );
-
-
 
   return (
     <form className="form_Wrapper" id="form">
@@ -146,7 +148,18 @@ const FormOrganization = () => {
         <CheckBox name={'interface'} labelText="Зручний інтерфейс" />
         <CheckBox name={'other'} labelText="Інше" />
       </div>
-
+      <div className="form_input_condition_Wrapper">
+        <Input
+          for="01_form_organization"
+          id="important"
+          type="text"
+          value=""
+          onChangeHandler={onChangeInputValue}
+          name="important"
+          placeholder="Що саме? "
+          required={true}
+        />
+      </div>
       <span className="form_Title" id="refuse">
         Чи готові Ви перейти на{' '}
         <span className="form_Title title_accent">український</span> аналог?
@@ -175,10 +188,7 @@ const FormOrganization = () => {
         Від імені якої організації Ви виступаєте?
       </span>
       <div className="formContainer">
-        <div
-          className="form"
-          id="01_form_organization"
-        >
+        <div className="form" id="01_form_organization">
           {inputData.map((input, index) => {
             return (
               <div key={index} className="form_inputWrapper">
@@ -201,7 +211,9 @@ const FormOrganization = () => {
       <button
         disabled={isButtonDisabled}
         onClick={onclickButton}
-        className={classNames('form_Button', { form_Button_disable: isButtonDisabled })}
+        className={classNames('form_Button', {
+          form_Button_disable: isButtonDisabled,
+        })}
         form="01_form_organization"
       >
         Відмовитись від 1С
