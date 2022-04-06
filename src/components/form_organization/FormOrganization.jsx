@@ -68,6 +68,7 @@ const FormOrganization = () => {
 
     inputData.forEach(field => {
       if (field.type === 'email' || field.type === 'tel') {
+        // eslint-disable-next-line default-case
         switch (field.type) {
           case 'email': {
             const testResult = !regForMail.test(field.value);
