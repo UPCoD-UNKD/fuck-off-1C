@@ -1,67 +1,35 @@
 import './Input.css';
 import classNames from 'classnames';
-import { useCallback, useMemo, useRef, useState } from 'react';
+import { useCallback, useRef, useState } from 'react';
 
 const Input = props => {
   const [value, setValue] = useState(props.value);
-  const [isHidePlaceholder, setIsHidePlaceholder] = useState(false);
+  const [isHidePlaceholder, setIsHidePlaceholder] = useState(props.isHidePlaceholder);
   const InputRef = useRef(null);
-  const [isRequired, setIsRequired] = useState(false);
-
-  const regForMail = useMemo(()=> new RegExp("^([a-z0-9_-]+\\.)*[a-z0-9_-]+@[a-z0-9_-]+(\\.[a-z0-9_-]+)*\\.[a-z]{2,6}$"),[])
-  const regForPhone = useMemo(()=> new RegExp("^(\\+3)\\d{11}$"),[])
 
   const onChangeHandler = useCallback(
     e => {
       setValue(e.target.value);
-      props.onChangeHandler(e.target.id, value);
+      props.onChangeHandler(e.target.id, e.target.value);
     },
-    [props, value]
+    [props]
   );
 
   const onFocusHandler = useCallback((e) => {
     setIsHidePlaceholder(true);
+    props.onChangeHandler(e.target.id, e.target.value);
     if(e.target.id === "phone") {
       setValue("+380")
     }
-  }, []);
+  }, [props]);
 
-  const onBlurHandler = useCallback(e => {
-    if(e.target.value !== "" && e.target.id !== "phone") {
-      switch (e.target.id ){
-        case("email"): {
-          const testResult = !regForMail.test(e.target.value);
-          setIsRequired(testResult);
-          break;
-        }
-        default: {
-          if(e.target.value.length > 0) {
-            setIsRequired(false);
-          }
-        }
-      }
-    } else {
-    if(e.target.id === "phone" && e.target.value !== "+380") {
-      const testResult = !regForPhone.test(e.target.value);
-      setIsRequired(testResult);
-}
-    }
-
-    if (e.target.value === '' && e.target.id !== "phone") {
-      setIsHidePlaceholder(false);
-    } else {
-      if(e.target.value === '+380') {
-        setIsHidePlaceholder(false);
-        setValue("");
-      }
-    }
-
-  }, [regForPhone, regForMail]);
 
   const onClickLabelHandler = useCallback(()=> {
-    setIsHidePlaceholder(true);
-    InputRef.current.focus();
-  },[])
+    if(props.readonly=== false || props.readonly === undefined) {
+      setIsHidePlaceholder(true);
+      InputRef.current.focus();
+    }
+  },[props.readonly])
 
   return (
     <>
@@ -72,10 +40,9 @@ const Input = props => {
         </label>
       )}
       <input
-        className={classNames('form_input', { form_input_placeholder: props.required === false}, {form_input_error: isRequired})}
+        className={classNames('form_input', { form_input_placeholder: props.required === false}, {form_input_error: props.isRequired})}
         ref = {InputRef}
         onFocus={onFocusHandler}
-        onBlur={onBlurHandler}
         onChange={onChangeHandler}
         value={value}
         id={props.id}
@@ -86,6 +53,7 @@ const Input = props => {
             ? null
             : props.placeholder
         }
+        disabled={props.readonly}
       />
     </>
   );
