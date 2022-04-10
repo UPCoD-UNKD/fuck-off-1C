@@ -127,9 +127,6 @@
   background: linear-gradient(180deg, #0047ff 0%, #fff500 100%);
 }
 
-.form_Button_disable {
-  cursor: not-allowed !important;
-}
 .title_accent {
   font-size: 19px;
   color: var(--second-accent-color);
