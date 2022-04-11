@@ -24,7 +24,7 @@ export const Hero = () => {
         <RightEarth />
       </div>
 
-      <img className="bgNo1C" src={require('../../img/No1C.png')} alt="no1c" />
+      <img className="modalLogo" src={require('../../img/No1C.png')} alt="no1c" />
     </div>
   );
 };
