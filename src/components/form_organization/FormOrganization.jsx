@@ -142,11 +142,11 @@ const FormOrganization = (props) => {
 
       let isCorrectForm = (inputData.findIndex(el => el.isRequired === true) !== -1);
 
-      if(isCheckedAnother === false && additionalInputData[0].value === "") {
+      if (isCheckedAnother === false && additionalInputData[0].value === '') {
         additionalInputData[0].isRequired = true;
         isCorrectForm = true;
       }
-      if(isCheckedCondition === false && additionalInputData[1].value === "") {
+      if (isCheckedCondition === false && additionalInputData[1].value === '') {
         additionalInputData[1].isRequired = true;
         isCorrectForm = true;
       }
@@ -171,13 +171,13 @@ const FormOrganization = (props) => {
           }
         });
         fetch('https://eo909y8mp4qmu1.m.pipedream.net', {
-          method: 'POST', // или 'PUT'
+          method: 'POST',
           body: JSON.stringify(result),
           headers: {
             'Content-Type': 'application/json',
           },
         }).then(res => {
-          if(res.status === 200) {
+          if (res.status === 200) {
             props.openModal(true);
           }
         });
