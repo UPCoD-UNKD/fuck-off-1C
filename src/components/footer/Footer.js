@@ -1,7 +1,6 @@
 import { ReactComponent as Logo } from '../../img/icon/Logo.svg';
 import { ReactComponent as MailBlk } from '../../img/icon/MailBlk.svg';
-import { ReactComponent as PhoneBlk } from '../../img/icon/PhoneBlk.svg';
-import { ReactComponent as Linkedin } from '../../img/icon/Linkedin.svg';
+
 import { ReactComponent as Up } from '../../img/icon/Up.svg';
 import AnchorLink from 'react-anchor-link-smooth-scroll-v2';
 import './Footer.css';
@@ -14,19 +13,16 @@ export const Footer = () => {
           <Up className="footer-arrow-up" />
         </AnchorLink>
         <div className="footer-contacts">
-          <a className="footer-contacts-item" href="mailto:test@test.com">
-            <MailBlk />
-          </a>
-          <a className="footer-contacts-item" href="tel:">
-            <PhoneBlk />
-          </a>
+          <p className="footer-contacts-text">
+            адрес: Україна, 65007, Одеська обл., місто Одеса, вул.
+            Старопортофранківська, б.107-21 ИПН: 44757504 назва: ГРОМАДСЬКА
+            ОРГАНІЗАЦІЯ "АСОЦІАЦІЯ ДОПОМОГИ КРАЇНІ"
+          </p>
           <a
             className="footer-contacts-item"
-            href="https://www.linkedin.com/"
-            target="_blank"
-            rel="noreferrer noopener"
+            href="mailto: admin@buxonline.org"
           >
-            <Linkedin />
+            <MailBlk />
           </a>
         </div>
       </div>
