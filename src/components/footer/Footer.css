@@ -37,6 +37,12 @@
   transform: scale(1.1);
 }
 
+.footer-contacts-text {
+  width: 300px;
+  font-size: 12px;
+  margin-right: 18px;
+}
+
 @media (max-width: 834px) {
   .footer {
     padding: 0 30px 35px 30px;

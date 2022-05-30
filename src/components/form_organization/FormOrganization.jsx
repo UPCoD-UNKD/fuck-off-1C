@@ -11,7 +11,7 @@ const FormOrganization = (props) => {
     id: 'concrete',
     type: 'text',
     name: 'Що саме?',
-    placeholder: 'Що саме?',
+    placeholder: 'Якщо інше, то що саме?',
     required: true,
     value: '',
     isRequired: false,
