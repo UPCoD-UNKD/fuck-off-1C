@@ -1,0 +1,51 @@
+.modalSupport {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .7);
+  display: flex;
+  justify-content: center;
+  padding-top: 5rem;
+}
+
+.modalSupportBody {
+  position: relative;
+  padding: 2rem;
+  width: 380px;
+  height: 500px;
+  border-radius: 5px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.modalTitleSupport{
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  color: #5987FA;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.modalSupportContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.modalTextSupport{
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+.modalLink{
+  color: #5987FA;
+  padding-left: 4px;
+}
+.marginBottomText{
+  margin-bottom: 20px;
+}

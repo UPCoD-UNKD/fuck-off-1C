@@ -2,21 +2,23 @@ import './FormOrganization.css';
 import Input from '../input/Input';
 import { useCallback, useRef, useState } from 'react';
 import CheckBox from '../Radio/RadioButton';
+import modalStore from 'mobX/modalStore';
 
-const FormOrganization = (props) => {
+const FormOrganization = props => {
   const formRef = useRef(null);
   const [isCheckedAnother, setIsCheckedAnother] = useState(true);
   const [isCheckedCondition, setIsCheckedCondition] = useState(true);
-  const [additionalInputData, setAdditionalInputData] = useState([{
-    id: 'concrete',
-    type: 'text',
-    name: 'Що саме?',
-    placeholder: 'Якщо інше, то що саме?',
-    required: true,
-    value: '',
-    isRequired: false,
-    isHidePlaceholder: false,
-  },
+  const [additionalInputData, setAdditionalInputData] = useState([
+    {
+      id: 'concrete',
+      type: 'text',
+      name: 'Що саме?',
+      placeholder: 'Якщо інше, то що саме?',
+      required: true,
+      value: '',
+      isRequired: false,
+      isHidePlaceholder: false,
+    },
     {
       id: 'condition',
       type: 'text',
@@ -84,7 +86,7 @@ const FormOrganization = (props) => {
   const onChangeInputValue = useCallback(
     (id, value) => {
       const regForMail = new RegExp(
-        '^([a-z0-9_-]+\\.)*[a-z0-9_-]+@[a-z0-9_-]+(\\.[a-z0-9_-]+)*\\.[a-z]{2,6}$',
+        '^([a-z0-9_-]+\\.)*[a-z0-9_-]+@[a-z0-9_-]+(\\.[a-z0-9_-]+)*\\.[a-z]{2,6}$'
       );
       const regForPhone = new RegExp('^(\\+3)\\d{11}$');
 
@@ -93,7 +95,10 @@ const FormOrganization = (props) => {
       if (index > -1) {
         newState[index].isHidePlaceholder = true;
         newState[index].value = value;
-        if (newState[index].type === 'email' || newState[index].type === 'tel') {
+        if (
+          newState[index].type === 'email' ||
+          newState[index].type === 'tel'
+        ) {
           // eslint-disable-next-line default-case
           switch (newState[index].type) {
             case 'email': {
@@ -122,7 +127,7 @@ const FormOrganization = (props) => {
         setAdditionalInputData(newState);
       }
     },
-    [inputData, additionalInputData],
+    [inputData, additionalInputData]
   );
 
   const onclickButton = useCallback(
@@ -140,7 +145,8 @@ const FormOrganization = (props) => {
         }
       });
 
-      let isCorrectForm = (inputData.findIndex(el => el.isRequired === true) !== -1);
+      let isCorrectForm =
+        inputData.findIndex(el => el.isRequired === true) !== -1;
 
       if (isCheckedAnother === false && additionalInputData[0].value === '') {
         additionalInputData[0].isRequired = true;
@@ -157,7 +163,10 @@ const FormOrganization = (props) => {
         props.openModal(true);
       } else {
         keys.forEach((key, index) => {
-          if (formElements[index]?.type === 'radio' && formElements[index]?.checked) {
+          if (
+            formElements[index]?.type === 'radio' &&
+            formElements[index]?.checked
+          ) {
             if (formElements[index]?.name === 'ofCondition') {
               result[formElements[index]?.id] = formElements[index]?.checked;
             } else {
@@ -165,7 +174,10 @@ const FormOrganization = (props) => {
             }
           }
           if (formElements[index]?.type !== 'radio') {
-            if (formElements[index]?.value !== '' && formElements[index]?.value !== undefined) {
+            if (
+              formElements[index]?.value !== '' &&
+              formElements[index]?.value !== undefined
+            ) {
               result[formElements[index]?.name] = formElements[index]?.value;
             }
           }
@@ -182,62 +194,93 @@ const FormOrganization = (props) => {
           }
         });
       }
-
-
     },
-    [props, inputData, isCheckedCondition, isCheckedAnother, additionalInputData],
+    [
+      props,
+      inputData,
+      isCheckedCondition,
+      isCheckedAnother,
+      additionalInputData,
+    ]
   );
 
+  const onClickButtonSupportHandler = useCallback(() => {
+    modalStore.toggleModal();
+  }, []);
+
   return (
-    <form ref={formRef} className='form_Wrapper' id='form'>
-      <h3 className='mainTitle'>Ваша думка</h3>
-      <span className='subtitle'>
+    <form ref={formRef} className="form_Wrapper" id="form">
+      <h3 className="mainTitle">Ваша думка</h3>
+      <span className="subtitle">
         Дане опитування допоможе нам почути Вашу думку.
       </span>
-      <span className='form_Title'>Які функції 1С для Вас пріоритетні?</span>
-      <div className='groupOfFunctionRadioButton'>
+      <span className="form_Title">Які функції 1С для Вас пріоритетні?</span>
+      <div className="groupOfFunctionRadioButton">
         <CheckBox
           name={'Управління виробництвом та облік витрат'}
-          labelText='Управління виробництвом та облік витрат'
+          labelText="Управління виробництвом та облік витрат"
         />
         <CheckBox
           name={'Логістика і закупівля'}
-          labelText='Логістика і закупівля'
+          labelText="Логістика і закупівля"
           isChecked={true}
         />
-        <CheckBox name={'Управлінській облік'} labelText='Управлінській облік' />
+        <CheckBox
+          name={'Управлінській облік'}
+          labelText="Управлінській облік"
+        />
         <CheckBox
           name={'Коплексне управління підприємствами (ERP)'}
-          labelText='Коплексне управління підприємствами (ERP)'
+          labelText="Коплексне управління підприємствами (ERP)"
         />
-        <CheckBox name={'Роздрібна торгівля'} labelText='Роздрібна торгівля' />
-        <CheckBox name={'Фінансове  планування'} labelText='Фінансове  планування' />
+        <CheckBox name={'Роздрібна торгівля'} labelText="Роздрібна торгівля" />
+        <CheckBox
+          name={'Фінансове  планування'}
+          labelText="Фінансове  планування"
+        />
         <CheckBox
           name={'Управління взаємовідносинами з клієнтами (CRM)'}
-          labelText='Управління взаємовідносинами з клієнтами (CRM)'
+          labelText="Управління взаємовідносинами з клієнтами (CRM)"
         />
-        <CheckBox name={'Бухгалтерській облік'} labelText='Бухгалтерській облік' />
-        <CheckBox name={'Управління документообігом'} labelText='Управління документообігом' />
-        <CheckBox name={'Товарно-складський облік'} labelText='Товарно-складський облік' />
-        <CheckBox name={'Кадровий облік'} labelText='Кадровий облік' />
+        <CheckBox
+          name={'Бухгалтерській облік'}
+          labelText="Бухгалтерській облік"
+        />
+        <CheckBox
+          name={'Управління документообігом'}
+          labelText="Управління документообігом"
+        />
+        <CheckBox
+          name={'Товарно-складський облік'}
+          labelText="Товарно-складський облік"
+        />
+        <CheckBox name={'Кадровий облік'} labelText="Кадровий облік" />
       </div>
 
-      <span className='form_Title'>Що для Вас важливо в 1С?</span>
-      <div className='groupOfImportantRadioButton'>
-        <CheckBox name={'Легкість використання'} labelText='Легкість використання' />
-        <CheckBox name={'Дизайн'} labelText='Дизайн' />
-        <CheckBox name={'Ціна'} labelText='Ціна' />
+      <span className="form_Title">Що для Вас важливо в 1С?</span>
+      <div className="groupOfImportantRadioButton">
+        <CheckBox
+          name={'Легкість використання'}
+          labelText="Легкість використання"
+        />
+        <CheckBox name={'Дизайн'} labelText="Дизайн" />
+        <CheckBox name={'Ціна'} labelText="Ціна" />
         <CheckBox
           name={'Легкість освоєння'}
-          labelText='Легкість освоєння'
+          labelText="Легкість освоєння"
           isChecked={true}
         />
-        <CheckBox name={'Зручний інтерфейс'} labelText='Зручний інтерфейс' />
-        <CheckBox name={'Інше'} labelText='Інше' isChecked={false} setActive={setIsCheckedAnother} />
+        <CheckBox name={'Зручний інтерфейс'} labelText="Зручний інтерфейс" />
+        <CheckBox
+          name={'Інше'}
+          labelText="Інше"
+          isChecked={false}
+          setActive={setIsCheckedAnother}
+        />
       </div>
-      <div className='form_input_condition_Wrapper'>
+      <div className="form_input_condition_Wrapper">
         <Input
-          for='01_form_organization'
+          for="01_form_organization"
           id={additionalInputData[0].id}
           type={additionalInputData[0].type}
           value={additionalInputData[0].value}
@@ -250,23 +293,40 @@ const FormOrganization = (props) => {
           isHidePlaceholder={additionalInputData[0].isHidePlaceholder}
         />
       </div>
-      <span className='form_Title' id='refuse'>
+      <span className="form_Title" id="refuse">
         Чи готові Ви перейти на{' '}
-        <span className='form_Title title_accent'>український</span> аналог?
+        <span className="form_Title title_accent">український</span> аналог?
       </span>
-      <div className='groupOfConditionRadioButton'>
-        <CheckBox customId='Чи готові Ви перейти на український аналог?Так' name={'ofCondition'} labelText='Так'
-                  isChecked={true} />
-        <CheckBox customId='Чи готові Ви перейти на український аналог?Ні' name={'ofCondition'} labelText='Ні' />
-        <CheckBox customId='Чи готові Ви перейти на український аналог?За умови' name={'ofCondition'}
-                  labelText='За умови' isChecked={false} setActive={setIsCheckedCondition} />
+      <div className="groupOfConditionRadioButton">
+        <CheckBox
+          customId="Чи готові Ви перейти на український аналог?Так"
+          name={'ofCondition'}
+          labelText="Так"
+          isChecked={true}
+        />
+        <CheckBox
+          customId="Чи готові Ви перейти на український аналог?Ні"
+          name={'ofCondition'}
+          labelText="Ні"
+        />
+        <CheckBox
+          customId="Чи готові Ви перейти на український аналог?За умови"
+          name={'ofCondition'}
+          labelText="За умови"
+          isChecked={false}
+          setActive={setIsCheckedCondition}
+        />
       </div>
-      <button className='donate-button' type='button'>
+      <button
+        className="donate-button"
+        type="button"
+        onClick={onClickButtonSupportHandler}
+      >
         ПІДТРИМАТИ ПРОЕКТ
       </button>
-      <div className='form_input_condition_Wrapper'>
+      <div className="form_input_condition_Wrapper">
         <Input
-          for='01_form_organization'
+          for="01_form_organization"
           id={additionalInputData[1].id}
           type={additionalInputData[1].type}
           value={additionalInputData[1].value}
@@ -279,14 +339,14 @@ const FormOrganization = (props) => {
           isHidePlaceholder={additionalInputData[1].isHidePlaceholder}
         />
       </div>
-      <span className='form_Title'>
+      <span className="form_Title">
         Від імені якої організації Ви виступаєте?
       </span>
-      <div className='formContainer'>
-        <div className='form' id='01_form_organization'>
+      <div className="formContainer">
+        <div className="form" id="01_form_organization">
           {inputData.map((input, index) => {
             return (
-              <div key={`${index}${input.name}`} className='form_inputWrapper'>
+              <div key={`${index}${input.name}`} className="form_inputWrapper">
                 <Input
                   key={input.isRequired}
                   id={input.id}
@@ -303,13 +363,13 @@ const FormOrganization = (props) => {
             );
           })}
         </div>
-        <span className='prompt'>обов’язкові поля</span>
+        <span className="prompt">обов’язкові поля</span>
       </div>
 
       <button
         onClick={onclickButton}
-        className='form_Button'
-        form='01_form_organization'
+        className="form_Button"
+        form="01_form_organization"
       >
         Відмовитись від 1С
       </button>
