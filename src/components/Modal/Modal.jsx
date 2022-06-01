@@ -1,36 +1,35 @@
 import { useCallback } from 'react';
 import './Modal.css';
 import classNames from 'classnames';
+import modalStore from 'mobX/modalStore';
+import { observer } from 'mobx-react-lite';
 
-const Modal = props => {
+const Modal = observer( () => {
   const onClickHandler = useCallback(() => {
-    props.closeModal(false);
-  }, [props]);
+   modalStore.toggleMainModal()
+  }, []);
 
 
-  if (props.isOpenModal) {
+  if (modalStore.isOpenMainModal) {
     return (
       <div className={'modal'}>
         <div className={'modalBody'}>
           <div
             className={classNames('modalTitle', {
-              modalErrorTitle: props.isCorrectSendData === false,
+              modalErrorTitle: modalStore.isCorrectSendData === false,
             })}
           >
-            {props.isCorrectSendData ? 'Дякуємо!' : 'Oops!'}
+            {modalStore.isCorrectSendData ? 'Дякуємо!' : 'Oops!'}
           </div>
           <div className={'modalText'}>
-            {props.isCorrectSendData 
+            {modalStore.isCorrectSendData 
               ? 'Ваша відповідь відправлена'
               : 'Будь-ласка, запновіть поля правильно'}
           </div>
-          {props.isSupprortModal && (
-            <>asdfasdfasdf</>
-          )}
           <button className={'closeButton'} onClick={onClickHandler}>
-            {props.isCorrectSendData ? 'Чудово' : 'Повернутись!'}
+            {modalStore.isCorrectSendData ? 'Чудово' : 'Повернутись!'}
           </button>
-          {props.isCorrectSendData && (
+          {modalStore.isCorrectSendData && (
             <img
               className="modalLogo"
               src={require('../../img/No1C.png')}
@@ -42,5 +41,5 @@ const Modal = props => {
     );
   }
    else return null;
-};
+});
 export default Modal;

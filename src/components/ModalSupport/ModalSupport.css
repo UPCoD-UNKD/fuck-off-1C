@@ -41,6 +41,7 @@
 .modalTextSupport{
   font-size: 12px;
   margin-bottom: 6px;
+  text-align: justify;
 }
 .modalLink{
   color: #5987FA;

@@ -3,85 +3,17 @@ import Input from '../input/Input';
 import { useCallback, useRef, useState } from 'react';
 import CheckBox from '../Radio/RadioButton';
 import modalStore from 'mobX/modalStore';
+import ADDITIONAL_INPUT_DATA from "../../constants/additionalInputData"
+import INPUT_DATA from 'constants/inputData';
+import { observer } from 'mobx-react-lite';
 
-const FormOrganization = props => {
+
+const FormOrganization = observer(() => {
   const formRef = useRef(null);
   const [isCheckedAnother, setIsCheckedAnother] = useState(true);
   const [isCheckedCondition, setIsCheckedCondition] = useState(true);
-  const [additionalInputData, setAdditionalInputData] = useState([
-    {
-      id: 'concrete',
-      type: 'text',
-      name: 'Що саме?',
-      placeholder: 'Якщо інше, то що саме?',
-      required: true,
-      value: '',
-      isRequired: false,
-      isHidePlaceholder: false,
-    },
-    {
-      id: 'condition',
-      type: 'text',
-      name: 'Умови відмови',
-      placeholder: 'Умови відмови',
-      required: true,
-      value: '',
-      isRequired: false,
-      isHidePlaceholder: false,
-    },
-  ]);
-  const [inputData, setInputData] = useState([
-    {
-      id: 'organization',
-      type: 'text',
-      name: 'Податковий номер',
-      placeholder: 'Податковий номер',
-      required: false,
-      value: '',
-      isRequired: false,
-      isHidePlaceholder: false,
-    },
-    {
-      id: 'role',
-      type: 'text',
-      name: 'Посада',
-      placeholder: 'Посада',
-      required: false,
-      value: '',
-      isRequired: false,
-      isHidePlaceholder: false,
-    },
-    {
-      id: 'fullName',
-      type: 'text',
-      name: 'ПІБ',
-      placeholder: 'ПІБ',
-      required: true,
-      value: '',
-      isRequired: false,
-      isHidePlaceholder: false,
-    },
-    {
-      id: 'phone',
-      type: 'tel',
-      name: 'Номер телефону',
-      placeholder: 'Номер телефону',
-      required: true,
-      value: '',
-      isRequired: false,
-      isHidePlaceholder: false,
-    },
-    {
-      id: 'email',
-      type: 'email',
-      name: 'Email',
-      placeholder: 'Email',
-      required: true,
-      value: '',
-      isRequired: false,
-      isHidePlaceholder: false,
-    },
-  ]);
+  const [additionalInputData, setAdditionalInputData] = useState(ADDITIONAL_INPUT_DATA);
+  const [inputData, setInputData] = useState(INPUT_DATA);
 
   const onChangeInputValue = useCallback(
     (id, value) => {
@@ -159,8 +91,8 @@ const FormOrganization = props => {
 
       if (isCorrectForm) {
         setInputData([...inputData]);
-        props.setIsCorrectSendData(false);
-        props.openModal(true);
+        modalStore.setIsCorrectSendData(false);
+        modalStore.toggleMainModal();
       } else {
         keys.forEach((key, index) => {
           if (
@@ -190,13 +122,12 @@ const FormOrganization = props => {
           },
         }).then(res => {
           if (res.status === 200) {
-            props.openModal(true);
+           modalStore.toggleMainModal();
           }
         });
       }
     },
     [
-      props,
       inputData,
       isCheckedCondition,
       isCheckedAnother,
@@ -375,6 +306,6 @@ const FormOrganization = props => {
       </button>
     </form>
   );
-};
+});
 
 export default FormOrganization;
