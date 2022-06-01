@@ -9,13 +9,21 @@ import { useState } from 'react';
 export const App = () => {
   const [isOpenModal, setIsOpenModal] = useState(false);
   const [isCorrectSendData, setIsCorrectSendData] = useState(true);
+  
   return (
     <div className="app">
       <Hero />
       <Mission />
-      <FormOrganization  openModal={setIsOpenModal} setIsCorrectSendData = {setIsCorrectSendData} />
+      <FormOrganization
+        openModal={setIsOpenModal}
+        setIsCorrectSendData={setIsCorrectSendData}
+      />
       <Footer />
-      <Modal isCorrectSendData={ isCorrectSendData}  isOpenModal = {isOpenModal} closeModal = {setIsOpenModal}/>
+      <Modal
+        isCorrectSendData={isCorrectSendData}
+        isOpenModal={isOpenModal}
+        closeModal={setIsOpenModal}
+      />
     </div>
   );
 };
