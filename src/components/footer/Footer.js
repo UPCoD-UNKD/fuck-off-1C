@@ -1,6 +1,5 @@
 import { ReactComponent as Logo } from '../../img/icon/Logo.svg';
 import { ReactComponent as MailBlk } from '../../img/icon/MailBlk.svg';
-
 import { ReactComponent as Up } from '../../img/icon/Up.svg';
 import AnchorLink from 'react-anchor-link-smooth-scroll-v2';
 import './Footer.css';
